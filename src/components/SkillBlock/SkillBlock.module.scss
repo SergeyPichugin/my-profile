@@ -1,0 +1,43 @@
+.skillGradient {
+  width: 100%;
+  height: 30px;
+  background: var(--skill-gradient-bad);
+  background: linear-gradient(
+    var(--skill-gradient-good-deg),
+    var(--skill-gradient-bad-rgba) 0%,
+    var(--skill-gradient-good-rgba) 100%
+  );
+
+  position: relative;
+  margin-top: var(--m-l);
+  margin-bottom: var(--m-l);
+
+  font-weight: bold;
+
+  &::after {
+    content: "bad";
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &::before {
+    content: "good";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.skillGradientCenterName {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.skillBlocks {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-row-l);
+  flex-wrap: wrap;
+}
