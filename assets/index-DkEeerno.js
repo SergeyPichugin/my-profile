@@ -9196,7 +9196,7 @@ const Xd = [
             }),
           ],
         }),
-        L.jsx("div", { children: "Telegram: @sergey.pichugin" }),
+        L.jsx("div", { children: "Telegram: @sergeypichugin" }),
       ],
     }),
   sp = [
