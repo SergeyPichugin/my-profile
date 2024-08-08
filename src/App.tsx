@@ -1,19 +1,21 @@
 import {
-  Header,
-  SwitchTheme,
+  // Header,
+  // SwitchTheme,
   AboutBlock,
   SkillBlock,
   Layout,
   Contacts,
+  Works,
 } from "./components";
-import { MENU } from "./constants/menu";
+// import { MENU } from "./constants/menu";
 
 function App() {
   return (
     <Layout>
-      <Header menu={MENU} themeSwitch={<SwitchTheme />} />
+      {/* <Header menu={MENU} themeSwitch={<SwitchTheme />} /> */}
       <AboutBlock />
       <SkillBlock />
+      <Works />
       <Contacts />
     </Layout>
   );

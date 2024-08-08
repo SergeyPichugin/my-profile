@@ -54,18 +54,16 @@ const ItemSkill = ({ id, name, category, level }: IPropsSkill) => {
   };
   return (
     <div key={id} className={styles.item}>
-      <p>
-        <div
-          className={styles.levelLabel}
-          style={{ background: levelLabelRender(level) }}
-        ></div>
-        &nbsp; {name}
-      </p>
-      <p>
+      <div
+        className={styles.levelLabel}
+        style={{ background: levelLabelRender(level) }}
+      ></div>
+      &nbsp; {name}
+      <div>
         category:{" "}
         <div className={styles.catLabelWrapper}>{categoryRender(category)}</div>
-      </p>
-      <p>level: {levelRender(level)} </p>
+      </div>
+      <div>level: {levelRender(level)} </div>
     </div>
   );
 };

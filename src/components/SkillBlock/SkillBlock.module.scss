@@ -8,6 +8,8 @@
     var(--skill-gradient-good-rgba) 100%
   );
 
+  border-radius: var(--br-xl);
+
   position: relative;
   margin-top: var(--m-l);
   margin-bottom: var(--m-l);
@@ -17,14 +19,14 @@
   &::after {
     content: "bad";
     position: absolute;
-    left: 8px;
+    left: var(--m-l);
     top: 50%;
     transform: translateY(-50%);
   }
   &::before {
     content: "good";
     position: absolute;
-    right: 8px;
+    right: var(--m-l);
     top: 50%;
     transform: translateY(-50%);
   }

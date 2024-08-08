@@ -2,10 +2,12 @@
   "files": [],
   "references": [
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.app.json",
+      "types": ["vite-plugin-svgr/client"]
     },
     {
-      "path": "./tsconfig.node.json"
+      "path": "./tsconfig.node.json",
+      "types": ["vite-plugin-svgr/client"]
     }
   ]
 }
