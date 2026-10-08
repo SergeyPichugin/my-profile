@@ -4,3 +4,7 @@
   gap: var(--gap-row-s);
   flex-wrap: wrap;
 }
+.empty {
+  font-size: var(--fs-m);
+  opacity: 0.7;
+}
