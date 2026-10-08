@@ -4,5 +4,9 @@
     "skills": "skils",
     "works": "works",
     "loading": "loading...",
-    "email": "email"
+    "email": "email",
+    "all": "all",
+    "category": "category",
+    "tag": "tag",
+    "nothingFound": "nothing found"
 }
