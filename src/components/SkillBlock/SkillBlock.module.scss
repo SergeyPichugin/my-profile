@@ -4,3 +4,39 @@
   gap: var(--gap-row-s);
   flex-wrap: wrap;
 }
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-row-s);
+  margin-bottom: var(--m-l);
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--gap-col-s);
+}
+
+.filterLabel {
+  font-size: var(--fs-l);
+  opacity: 0.7;
+}
+
+.chip {
+  padding: var(--p-s) var(--m-m);
+  font-size: var(--fs-l);
+  background: var(--bg-cat-label);
+}
+
+.chipActive {
+  border-color: #646cff;
+  color: #646cff;
+}
+
+.empty {
+  font-size: var(--fs-m);
+  opacity: 0.7;
+}
