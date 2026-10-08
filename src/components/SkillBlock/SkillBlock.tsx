@@ -1,38 +1,32 @@
-import { VFX } from "@vfx-js/core";
-import styles from "./SkillBlock.module.scss";
-import { SKILL } from "../../constants/skill";
-import ItemSkill from "./components/ItemSkill/ItemSkill";
-import { useEffect, useRef } from "react";
-const SkillBlock = () => {
-  const itemRef = useRef<HTMLDivElement>(null);
-  const vfx = new VFX();
+import { useMemo } from 'react'
 
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    return vfx.add(itemRef.current, { shader: "warpTransition" });
-  }, [vfx]);
+import { useTranslation } from 'react-i18next'
 
-  return (
-    <div>
-      <h2>skil</h2>
+import { SKILL } from '../../constants/skill'
 
-      <div className={styles.skillGradient}>
-        <div className={styles.skillGradientCenterName}>noraml</div>
-      </div>
+import styles from './SkillBlock.module.scss'
+import ItemSkill from './components/ItemSkill/ItemSkill'
 
-      <div className={styles.skillBlocks} ref={itemRef}>
-        {SKILL.map((skill) => (
-          <ItemSkill
-            id={skill.id}
-            name={skill.name}
-            category={skill.category}
-            level={skill.level}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
+export const SkillBlock = () => {
+    const { t } = useTranslation()
+    const shuffled = useMemo(
+        () => [...SKILL].sort(() => Math.random() - 0.5),
+        []
+      )
 
-export default SkillBlock;
+    return (
+        <div>
+            <h2>{t('skills')}</h2>
+            <div className={styles.skillBlocks}>
+                {shuffled.map((skill) => (
+                    <ItemSkill
+                        id={skill.id}
+                        name={skill.name}
+                        category={skill.category}
+                        tag={skill.tag}
+                    />
+                ))}
+            </div>
+        </div>
+    )
+}

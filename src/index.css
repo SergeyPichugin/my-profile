@@ -31,6 +31,11 @@
   --br-l: 16px;
   --br-xl: 32px;
 
+  --fs-xs: 10px;
+  --fs-l: 12px;
+  --fs-m: 14px;
+  --fs-xl: 16px;
+
   --skill-gradient-bad: #ff0000;
   --skill-gradient-normal: #dca519;
   --skill-gradient-good: #00ff0a;
@@ -42,6 +47,9 @@
     var(--skill-gradient-bad-rgba) 0%,
     var(--skill-gradient-good-rgba) 100%
   );
+
+  --gap-row-xs: 4px;
+  --gap-col-xs: 4px;
 
   --gap-row-s: 8px;
   --gap-col-s: 8px;
@@ -62,7 +70,7 @@
     --bg-color-card: rgba(255, 255, 255, 0.5);
     --font-color-card: #000;
 
-    --bg-cat-label: rgba(0, 0, 0, 0.5);
+    --bg-cat-label: rgba(0, 0, 0, 0.1);
   }
 }
 

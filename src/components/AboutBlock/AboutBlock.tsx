@@ -1,25 +1,17 @@
-import styles from "./AbloutBlock.module.scss";
-import Ava from "../../assets/screen.png";
-import { VFX } from "@vfx-js/core";
-import { useEffect, useRef } from "react";
-const AboutBlock = () => {
-  const avaRef = useRef<HTMLDivElement>(null);
-  const vfx = new VFX();
-  useEffect(() => {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    return vfx.add(avaRef.current, { shader: "rgbShift" });
-  }, [vfx]);
+import { useTranslation } from 'react-i18next'
 
-  return (
-    <div>
-      <div ref={avaRef} className={styles.ava}>
-        <img src={Ava} />
-      </div>
-      <h2>about me</h2>
-      <p>Hi i'am web developer, my name is Sergey Pichugin</p>
-    </div>
-  );
-};
+import styles from './AbloutBlock.module.scss'
+import Ava from '../../assets/screen.png'
 
-export default AboutBlock;
+export const AboutBlock = () => {
+    const { t } = useTranslation();
+
+    return (
+        <div>
+            <div className={styles.ava}>
+                <img src={Ava} />
+            </div>
+            <p>{t('description', { name: t('name') })}</p>
+        </div>
+    )
+}

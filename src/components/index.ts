@@ -1,9 +1,6 @@
-import Header from "./Header/Header";
-import SwitchTheme from "./SwitchTheme/SwitchTheme";
-import AboutBlock from "./AboutBlock/AboutBlock";
-import SkillBlock from "./SkillBlock/SkillBlock";
-import Layout from "./Layout/Layout";
-import Contacts from "./Contacts/Contacts";
-import Works from "./Works/Works";
-
-export { Header, SwitchTheme, AboutBlock, SkillBlock, Layout, Contacts, Works };
+export {AboutBlock} from "./AboutBlock/AboutBlock";
+export {SkillBlock} from "./SkillBlock/SkillBlock";
+export {Layout} from "./Layout/Layout";
+export {Contacts} from "./Contacts/Contacts";
+export {Works} from "./Works/Works";
+export { SwitchLanguage } from "./SwitchLanguage/SwitchLanguage";

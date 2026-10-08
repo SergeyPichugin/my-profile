@@ -1,24 +1,15 @@
-import {
-  // Header,
-  // SwitchTheme,
-  AboutBlock,
-  SkillBlock,
-  Layout,
-  Contacts,
-  Works,
-} from "./components";
-// import { MENU } from "./constants/menu";
+import { AboutBlock, SkillBlock, Layout, Contacts } from './components'
+import { SwitchLanguage } from './components/SwitchLanguage/SwitchLanguage'
 
 function App() {
-  return (
-    <Layout>
-      {/* <Header menu={MENU} themeSwitch={<SwitchTheme />} /> */}
-      <AboutBlock />
-      <SkillBlock />
-      <Works />
-      <Contacts />
-    </Layout>
-  );
+    return (
+        <Layout>
+            <SwitchLanguage />
+            <AboutBlock />
+            <SkillBlock />
+            <Contacts />
+        </Layout>
+    )
 }
 
-export default App;
+export default App
