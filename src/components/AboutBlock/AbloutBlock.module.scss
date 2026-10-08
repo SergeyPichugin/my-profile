@@ -1,0 +1,11 @@
+.ava {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+}
